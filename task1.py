@@ -1,6 +1,6 @@
 import datetime
 
-def input_date(): 
+def input_date(): # Function to input date from user
     user_date = input("Enter the date in the format (yyyy-mm-dd): ")
     pattern = "%Y-%m-%d"
     try:    
@@ -10,9 +10,10 @@ def input_date():
         return input_date()
     return date 
 
-date = input_date()
-print(f"User input date: {date}")
+date = input_date() # Call function to input date
 current_date = datetime.datetime.now().date()
-print(f"Current date on pc: {current_date}")
 difference = current_date - date
+# Output block
+print(f"User input date: {date}") 
+print(f"Current date on pc: {current_date}")
 print(f"Difference betweenn that dates: {difference.days}")
